@@ -1,0 +1,71 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="UTF-8">
+    <title> <%= title %> </title>
+    <link rel="stylesheet" href="assets/css/lib/jquery.fullpage.min.css" />
+    <link rel="stylesheet" href="assets/css/examples.css" />
+</head>
+<body>
+<ul id="menu">
+    <li data-menuanchor="firstPage"><a href="#features">Features</a></li>
+    <li data-menuanchor="secondPage"><a href="#configure">Configure</a></li>
+    <li data-menuanchor="3rdPage"><a href="#testdrive">Test Drive</a></li>
+</ul>
+<div id="fullpage">
+<div class="section"><h1>Features</h1></div>
+    <div class="section"><h1>Configure</h1></div>
+    <div class="section"><h1>Test Drive</h1>
+    <form id="testdrive_form">
+        <p>Name</p>
+        <p><input type="text" name="name" id="name"></p>
+         <p>Mobile</p>
+        <p><input type="text" name="mobile" id="mobile"></p>
+         <p>Location</p>
+        <p>
+        <select name="location" id="location">
+        <option selected="selected" value="0">Location</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Singapore">Singapore</option>
+        <option value="China">China</option>
+        </select>
+        </p>
+        <p>
+            <button type="submit" id="form_submit">Test Drive</button>
+        </p>
+    </form>
+<div id="form_error"></div>
+    </div>
+</div     
+ 
+ <%if (is_phone) { %>
+    <p>You're using a desktop</p>
+<% } %>
+</body>
+</html>
+<script src="assets/js/lib/jquery.min.js"></script>
+<script src="assets/js/lib/jquery.fullpage.min.js"></script>
+<script src="assets/js/formHandler.js"></script>
+<script>
+var Env = {
+    i18n:   {
+        "name_error_msg"            :   "<%= __('name_error_msg')%>",
+        "error_name_invalid"        :   "<%= __('error_name_invalid')%>",
+        "mobile_empty"              :   "<%= __('mobile_empty')%>",
+        "mobile_invalid"            :   "<%= __('mobile_invalid')%>",
+        "mobile_invalid_format"     :   "<%= __('mobile_invalid_format')%>",
+        "mobile_invalid_max"        :   "<%= __('mobile_invalid_max')%>",
+        "location_error_msg"        :   "<%= __('location_error_msg')%>"
+    }
+}
+</script>
+<script>
+$(document).ready(function() {
+    $('#fullpage').fullpage({
+         anchors:['features', 'configure', 'testdrive']
+    });
+});
+</script>

@@ -1,0 +1,103 @@
+<!-- views/partials/header.ejs -->
+
+<body>
+        
+<div id="fountainG">
+    <div id="fountainG_1" class="fountainG"></div>
+    <div id="fountainG_2" class="fountainG"></div>
+    <div id="fountainG_3" class="fountainG"></div>
+    <div id="fountainG_4" class="fountainG"></div>
+    <div id="fountainG_5" class="fountainG"></div>
+    <div id="fountainG_6" class="fountainG"></div>
+    <div id="fountainG_7" class="fountainG"></div>
+    <div id="fountainG_8" class="fountainG"></div>
+</div>
+</div>
+
+<div class="warpper homeWarpper" >
+    <div class="container">
+        <div class="innerContent">
+            <header>
+                <nav id="menu">
+                    <a href="/" id="menu_home" data-page="home" class="menuActive">Home</a>
+                    <a href="/videos" id="menu_videos" data-page="videos">Videos</a>
+                    <a href="/pictures" data-page="pictures">Pictures</a>
+                    <a href="/about" data-page="about" class="aboutCastrol">About Castrol</a>
+                    <a href="#" id="paticipate_now" class="paticipate_now">participate now</a>
+                </nav>
+                <a href="#" class="logo"></a>
+            </header>
+       
+        
+
+<div class="contestPage show" id="contestPage" style="display:none">
+<section>
+<div class="homePage" id="home_page">
+
+<div class="contestForm">
+<a href="#" class="logo"></a>
+<h1>#ACTIVSCOOTERDIARIES</h1>
+<h1>#CHALUDTEHAIN</h1>
+<h2>Share your story with your own scooter .
+From adventures to achievements
+to just about everything</h2>
+
+<form id="subscribe_form" action='/form' method="post" enctype="multipart/form-data">
+
+<textarea name="story" id="story" placeholder="350 Characers"></textarea>
+
+<div>
+    <input type="file" name="photo" id="photo">
+
+    <label for="photo">Uplolad Image With Scooter</label>
+    <span id="photo_filePath"></span>
+</div>
+
+<fieldset>
+
+<input type="text" id="name" name="name"  autocomplete="off" placeholder="Name"/>
+
+
+
+<input type="tel" id="age" name="age" class="marginRight"  autocomplete="off" placeholder="Age"/>
+
+
+
+<input type="text" id="city" name="city" autocomplete="off"  placeholder="City"/>
+
+
+
+<input type="tel" id="mobile" name="mobile" autocomplete="off" class="marginRight" placeholder="Mobile"/>
+
+
+</fieldset>
+
+<input type="email" id="email" name="email"  autocomplete="off" placeholder="Email"/>
+<div class="termsCheckBox">
+<div class="checkBox">
+      <input type="checkbox" value="1" id="agree" name="is_agree"  />
+      <label for="agree"></label>
+    </div>
+        <label for="agree" class="agree">I agree to <a href="/public/pdf/Castrol Activ Scooter Contest Terms.pdf"  target="_blank"> terms and conditions</a></label>
+    </div>
+<button type="submit" class="btn" id="form_submit"><i class="icon icon-tick-mark"></i><span>Submit</span></button>
+<p class="errBlock err" id="form_error" style="display: none;"></p>
+</form>
+<div class="social-buttons" id="share_popup">
+<a href="#" class=" social-button facebook" id="fb_share" ><i class="fa fa-facebook"></i>
+</a><a href="#" class="social-button twitter" id="tw_share"><i class="fa fa-twitter"></i></a>
+</div>
+</div>
+
+<div class="formLoader">
+    <div class="formLoader-spin"></div>
+</div>
+</div>
+<footer>
+</footer>
+
+<a href="#" class="closeForm" id="close_form"></a>
+</section>
+
+
+</div>
